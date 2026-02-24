@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Massagen & Preise – Tawan Spa 2 Hamburg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      padding: 14rem 4rem 7rem;
+      background: var(--dark-2);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(201,169,110,0.07) 0%, transparent 60%);
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 300;
+      color: var(--white);
+      position: relative;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .full-price-table {
+      background: var(--dark);
+      padding: 6rem 4rem;
+    }
+    .price-category {
+      margin-bottom: 5rem;
+    }
+    .price-category:last-child { margin-bottom: 0; }
+    .price-category h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .price-category > p {
+      color: var(--cream-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+    .price-rows { border-top: 1px solid rgba(201,169,110,0.15); }
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(201,169,110,0.08);
+      gap: 2rem;
+      transition: background 0.2s;
+    }
+    .price-row:hover { background: rgba(201,169,110,0.03); margin: 0 -1rem; padding: 1.25rem 1rem; }
+    .price-row-info h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .price-row-info p {
+      font-size: 0.8rem;
+      color: var(--cream-muted);
+    }
+    .price-amounts { text-align: right; white-space: nowrap; }
+    .price-amounts .main-price {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--gold);
+      display: block;
+    }
+    .price-amounts .sub-price {
+      font-size: 0.75rem;
+      color: var(--cream-muted);
+    }
+    .highlight-offer {
+      background: linear-gradient(135deg, rgba(201,169,110,0.12), rgba(201,169,110,0.04));
+      border: 1px solid var(--gold);
+      padding: 2rem;
+      margin: 3rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .highlight-offer h4 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--white); }
+    .highlight-offer p { color: var(--cream-muted); font-size: 0.85rem; margin-top: 0.3rem; }
+    .highlight-offer .price-tag { text-align: right; flex-shrink: 0; }
+    .highlight-offer .price-tag .new { font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block; }
+    .highlight-offer .price-tag .old { font-size: 0.9rem; color: var(--cream-muted); text-decoration: line-through; }
+    @media (max-width:768px) {
+      .page-hero { padding: 10rem 2rem 5rem; }
+      .full-price-table { padding: 4rem 2rem; }
+      .highlight-offer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="announcement">
+  ✦ Eröffnungsangebot: Office Syndrom Massage 45 Min. — <strong>49 €</strong> statt 59 €
+  <a href="https://tawanspa2thaimassage.setmore.com" target="_blank">Jetzt buchen →</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span>Tawan Spa 2</span>
+    <span>Thai Massage · Hamburg Altstadt</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#massagen">Massagen</a></li>
+    <li><a href="index.html#pakete">Pakete</a></li>
+    <li><a href="index.html#galerie">Galerie</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+    <li><a href="https://tawanspa2thaimassage.setmore.com" target="_blank" class="nav-cta">Termin buchen</a></li>
+  </ul>
+  <div class="hamburger" role="button" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="massagen.html">Massagen</a>
+  <a href="index.html#kontakt">Kontakt</a>
+  <a href="https://tawanspa2thaimassage.setmore.com" target="_blank">Termin buchen</a>
+</div>
+
+<div class="page-hero">
+  <div class="section-label">Leistungen</div>
+  <h1>Massagen &<br><em>Preise</em></h1>
+</div>
+
+<div class="full-price-table">
+
+  <!-- Highlight Offer -->
+  <div class="highlight-offer fade-in">
+    <div>
+      <h4>🌟 Office Syndrom Massage</h4>
+      <p>Unser Eröffnungs-Aktionsangebot — speziell für Büroarbeiter und verspannte Schultern</p>
+    </div>
+    <div class="price-tag">
+      <span class="new">49 €</span>
+      <span class="old">59 €</span>
+      <span style="font-size:0.7rem;color:var(--cream-muted);display:block;margin-top:0.25rem;">45 Minuten</span>
+    </div>
+    <a href="https://tawanspa2thaimassage.setmore.com" target="_blank" class="btn-primary">Buchen</a>
+  </div>
+
+  <!-- Thai Massages -->
+  <div class="price-category fade-in">
+    <div class="section-label">01</div>
+    <h3>Traditionelle Thai-Massage</h3>
+    <p>Die klassische Thai-Massage arbeitet mit Akupressur und Gelenksmobilisierung entlang der zehn Energielinien — ohne Öl, auf der Matte.</p>
+    <div class="price-rows">
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai-Massage</h4><p>45 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">49 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai-Massage</h4><p>60 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">64 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai-Massage</h4><p>90 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">89 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai-Massage</h4><p>120 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">114 €</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Oil Massage -->
+  <div class="price-category fade-in">
+    <div class="section-label">02</div>
+    <h3>Thai Öl- & Aromamassage</h3>
+    <p>Mit hochwertigen Ölen für tiefe Muskelentspannung und Hautpflege — entspannend und revitalisierend zugleich.</p>
+    <div class="price-rows">
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai Ölmassage</h4><p>45 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">55 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai Ölmassage</h4><p>60 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">69 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Thai Ölmassage</h4><p>90 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">99 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Aroma Ölmassage</h4><p>60 Minuten · mit ätherischen Ölen</p></div>
+        <div class="price-amounts"><span class="main-price">75 €</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specials -->
+  <div class="price-category fade-in">
+    <div class="section-label">03</div>
+    <h3>Spezial & Kombi</h3>
+    <p>Besondere Anwendungen und Kombinationen für das optimale Spa-Erlebnis.</p>
+    <div class="price-rows">
+      <div class="price-row">
+        <div class="price-row-info"><h4>HotStone Massage</h4><p>60 Minuten · warme Basaltsteine</p></div>
+        <div class="price-amounts"><span class="main-price">69 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>HotStone Massage</h4><p>90 Minuten</p></div>
+        <div class="price-amounts"><span class="main-price">99 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Body Scrub / Peeling</h4><p>Ganzkörper-Peeling für seidig glatte Haut</p></div>
+        <div class="price-amounts"><span class="main-price">55 €</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info"><h4>Office Syndrom Massage</h4><p>45 Minuten · Schulter & Nacken Spezial</p></div>
+        <div class="price-amounts"><span class="main-price">49 €</span><span class="sub-price">Angebotspreis (reg. 59 €)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pakete -->
+  <div class="price-category fade-in" id="pakete">
+    <div class="section-label">04</div>
+    <h3>Paradise Programme</h3>
+    <p>Unsere Verwöhnpakete — als Einzelperson oder zu zweit. Gutscheineinlösungen bitte telefonisch vereinbaren.</p>
+    <div class="price-rows">
+      <div class="price-row">
+        <div class="price-row-info">
+          <h4>Paradise Programm 1</h4>
+          <p>60 Min. Thailändische Öl-Massage</p>
+        </div>
+        <div class="price-amounts">
+          <span class="main-price">114 €</span>
+          <span class="sub-price">Paar: 214 €</span>
+        </div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-info">
+          <h4>Paradise Programm 2</h4>
+          <p>60 Min. Thailändische Öl-Massage</p>
+        </div>
+        <div class="price-amounts">
+          <span class="main-price">114 €</span>
+          <span class="sub-price">Paar: 214 €</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fade-in" style="margin-top:4rem;text-align:center;">
+    <a href="https://tawanspa2thaimassage.setmore.com" target="_blank" class="btn-primary" style="font-size:0.8rem;padding:1.1rem 3rem;">
+      Jetzt Termin buchen
+    </a>
+    <p style="color:var(--cream-muted);font-size:0.8rem;margin-top:1.5rem;">
+      Alle Preise inklusive MwSt. · Keine Erotikmassagen.
+    </p>
+  </div>
+
+</div>
+
+<div style="background:var(--dark-3);border-top:1px solid rgba(201,169,110,0.15);padding:4rem;text-align:center;">
+  <p style="color:var(--cream-muted);font-size:0.85rem;margin-bottom:2rem;">
+    <strong style="color:var(--cream);">Tawan Spa 2 & Thai Massage</strong> · Hopfenmarkt 31, 20457 Hamburg<br>
+    Mo, Mi–So: 11:00 – 20:00 Uhr · Di: Ruhetag
+  </p>
+  <a href="tel:+494067594949" class="btn-ghost">+49 40 675 949 49</a>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Tawan Spa 2 & Thai Massage GbR · Hopfenmarkt 31, 20457 Hamburg</p>
+    <div class="footer-legal">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
